@@ -18,12 +18,6 @@ def latency(image_size: np.ndarray, batch: np.ndarray, theta: np.ndarray) -> flo
     latency_value = theta0 + np.maximum(flops_value * theta1, bytes_value * theta2)
     return latency_value
 
-def energy(image_size: np.ndarray, batch: np.ndarray, theta_energy: np.ndarray) -> float:
-    theta0, theta1, theta2, theta3, theta4, theta5 = theta_energy
-    enery_value = theta3 * latency(image_size, batch, [theta0, theta1, theta2]) + theta4 * flops(image_size, batch) + theta5 * memory(image_size, batch)
-    return enery_value
-
-
 def energy(image_size: np.ndarray, batch: np.ndarray, theta_latency: np.ndarray, theta_energy: np.ndarray):
     theta3, theta4, theta5= theta_energy
     lat = latency(image_size, batch, theta_latency)
