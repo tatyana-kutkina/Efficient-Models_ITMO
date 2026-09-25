@@ -1,0 +1,13 @@
+{
+    "latency": {
+        "theta0 (launch overhead, s)": 0.0007358941984231267,
+        "theta1 (s/FLOP)": 1.9535479639915732e-13,
+        "theta2 (s/byte)": 1.953324735506781e-13
+    },
+    "energy": {
+        "theta_s (W, static power)": 6.439814745915276e-11,
+        "theta_f (J/FLOP)": 1.844715092997122e-11,
+        "theta_b (J/byte)": 2.0746880714642977e-09
+    }
+}
+
